@@ -1,0 +1,19 @@
+spring:
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  profiles:
+    include:
+      - domain
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+logging:
+  level:
+    org:
+      springframework: DEBUG
+    com:
+      fintech: DEBUG
+server:
+  port: 80
